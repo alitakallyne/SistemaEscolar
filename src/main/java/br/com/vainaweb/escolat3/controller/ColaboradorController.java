@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatusCode;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +23,7 @@ import br.com.vainaweb.escolat3.service.ColaboradorService;
 @RequestMapping("/Colaborador-hello")
 public class ColaboradorController {
 	
-
+    private ColaboradorService colaboradorService;
 	
 	@Autowired
 	private ColaboradorRepository colaboradorRepository;
@@ -28,22 +31,29 @@ public class ColaboradorController {
 
 	@GetMapping
 	public List<ColaboradorModel> encontrarColaboradores() {
-		return colaboradorRepository.findAll();
+		return colaboradorService.encontrarColaboradores();
 	}
-	
 	
 	@GetMapping("/{id}")
-	public Optional<ColaboradorModel> encontrarUmColaboradorPorId(@PathVariable Long id) {
-		
-		return colaboradorRepository.findById(id);
+	public ResponseEntity<ColaboradorModel> listarPorId(@PathVariable Long id) {
+		return colaboradorRepository.findById(id)
+				.map(resposta -> ResponseEntity.status(HttpStatus.OK).body(resposta))
+				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());
 	}
 	
-	@PostMapping
-	public void cadastrarColaborador(@RequestBody DadosColaborador dados) {
-		var colaborador = new ColaboradorModel(dados);
 		
-		colaboradorRepository.save(colaborador);
-			
-    }
+	@PostMapping
+	public ResponseEntity<String> cadastrarColaborador(@RequestBody DadosColaborador dados) {
+		
+		//ResponseEntity.status(HttpStatus.CREATED).body(colaboradorService.cadastarColaborador(dados));
+		
+		String mensagemCadastro = colaboradorService.cadastarColaborador(dados);
+
+	    if (mensagemCadastro.equalsIgnoreCase("CPF ja cadastrado!")) {
+	        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(mensagemCadastro);
+	    } else {
+	        return ResponseEntity.status(HttpStatus.CREATED).body(mensagemCadastro);
+	    }
+	}
 	
 }

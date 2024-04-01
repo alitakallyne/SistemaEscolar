@@ -35,5 +35,19 @@ public class ColaboradorService {
 		return colaboradorRepository.findById(id);
 		
 	}
+	
+	public String cadastarColaborador( DadosColaborador dados){
+		
+		var colaborador = colaboradorRepository.findByCpf(dados.cpf());
+		
+		if(colaborador.isPresent()) {
+			return "CPF ja cadastrado!";
+		}else {
+			 colaboradorRepository.save(new ColaboradorModel(dados.nome(),dados.cpf(),dados.email(),dados.cargo()));
+			return "Colaborador cadastrado com Sucesso!";
+		}
+		
+
+	}
 
 }

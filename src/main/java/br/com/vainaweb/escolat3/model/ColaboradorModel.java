@@ -24,8 +24,19 @@ import lombok.Setter;
 @Entity
 @Table(name = "tb_colaboradores")
 public class ColaboradorModel {
+	
+	
 
-    @Id
+    public ColaboradorModel( String nome, String email, String cpf, Cargo cargo) {
+		
+		this.nome = nome;
+		this.email = email;
+		this.cpf = cpf;
+		this.cargo = cargo;
+	}
+
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
     
@@ -37,6 +48,7 @@ public class ColaboradorModel {
 	 
 	 @Column(unique = true)
 	private String cpf;
+	 
 	private Cargo cargo;
 	
 	@Embedded //Os atributos de endereco farão parte da tabela colaborador em uma unica tabela so
