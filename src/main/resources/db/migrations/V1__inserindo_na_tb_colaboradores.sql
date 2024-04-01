@@ -1,0 +1,1 @@
+INSERT INTO tb_colaboradores VALUES ('Joao gato Belo','8038745987839','gatinho@belo',0);
