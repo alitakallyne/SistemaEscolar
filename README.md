@@ -52,7 +52,7 @@ Para executar o projeto localmente, siga estas etapas:
 - Importe o projeto em sua IDE preferida.
 - Execute a aplicação.
 - Acesse os endpoints através do navegador ou de uma ferramenta de teste de API, como o Insomnia.
-- 
+
 ## Observações Importantes ℹ️
 - Certifique-se de configurar corretamente as propriedades de conexão no arquivo application.properties.
 
