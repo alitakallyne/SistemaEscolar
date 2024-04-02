@@ -33,10 +33,10 @@ Este projeto consiste em desenvolver uma API de um sistema escolar utilizando Ja
 ## Estrutura do Projeto 🏗️
 O projeto está estruturado em pacotes conforme as responsabilidades:
 
-- com.api.ToLifeApi.Controller: Contém os controladores responsáveis por receber e processar as requisições HTTP.
-- com.api.ToLifeApi.Service: Contém os serviços responsáveis pela lógica de negócio da aplicação.
-- com.api.ToLifeApi.DTO: Contém os objetos de transferência de dados utilizados para representar os dados recebidos e enviados pela API.
-- com.api.ToLifeApi.Repositories: Contém as interfaces de repositório utilizadas para acessar o banco de dados.
+- br.com.vainaweb.escolat3.controller: Contém os controladores responsáveis por receber e processar as requisições HTTP.
+- br.com.vainaweb.escolat3.Servico: Contém os serviços responsáveis pela lógica de negócio da aplicação.
+- br.com.vainaweb.escolat3.DTO: Contém os objetos de transferência de dados utilizados para representar os dados recebidos e enviados pela API.
+- br.com.vainaweb.escolat3.Repositories: Contém as interfaces de repositório utilizadas para acessar o banco de dados.
   
 ## Como Contribuir 🤝
 - Faça um fork do repositório.
