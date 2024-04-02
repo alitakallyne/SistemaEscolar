@@ -56,6 +56,10 @@ Para executar o projeto localmente, siga estas etapas:
 ## Observações Importantes ℹ️
 - Certifique-se de configurar corretamente as propriedades de conexão no arquivo application.properties.
 
-## Autor
+## Autor 👩‍💻
 
 **[Alita Kallyne Do Nascimento](https://github.com/alitakallyne)**
+
+##  Projeto 💻
+
+Este projeto foi desenvolvido no  **[Curso Backend do VNW](https://vainaweb.com.br/)**
