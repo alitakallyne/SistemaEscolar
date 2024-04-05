@@ -43,7 +43,7 @@ public class ColaboradorService {
 		if(colaborador.isPresent()) {
 			return "CPF ja cadastrado!";
 		}else {
-			 colaboradorRepository.save(new ColaboradorModel(dados.nome(),dados.cpf(),dados.email(),dados.cargo()));
+			 colaboradorRepository.save(new ColaboradorModel(dados.nome(),dados.cpf(),dados.email(),dados.cargo(),dados.endereco()));
 			return "Colaborador cadastrado com Sucesso!";
 		}
 		

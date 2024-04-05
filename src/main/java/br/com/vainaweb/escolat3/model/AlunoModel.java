@@ -1,4 +1,4 @@
-package br.com.vainaweb.escolat3.model;
+  package br.com.vainaweb.escolat3.model;
 
 
 import br.com.vainaweb.escolat3.enums.Curso;

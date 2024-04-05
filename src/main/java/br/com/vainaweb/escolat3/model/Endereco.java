@@ -14,13 +14,18 @@ import lombok.Setter;
 @Embeddable //Permite que a classe seja incorparada em outra tabela
 public class Endereco {
 	
-	private String lougradourado;
-	private int numero;
-	private String complemento;
-	private String bairro;
-	private String ciadade;
-	private String uf;
 	private String cep;
+	private String lougradourado;
+	private String ciadade;
+	private String bairro;
+	private String uf;
+	private String complemento;
+	private int numero;
+	
+	
+	
+	
+	
 
 	
 
