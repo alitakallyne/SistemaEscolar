@@ -9,20 +9,9 @@ Este projeto consiste em desenvolver uma API de um sistema escolar utilizando Ja
 - **MySQL**
 - **Trello**
 
-## Entidades 📝
-- **Colaborador** : A entidade "Colaborador" possui os seguintes atributos:
-- Nome
-- Email
-- CPF
-- Cargo (ENUM)
-- Endereço
-- **Aluno** : A entidade "Aluno" possui os seguintes atributos:
-- Nome
-- Email
-- CPF
-- Curso (ENUM)
-- Telefone
-- Endereço
+## Diagrama UML do projeto 📝
+
+<img src="ClasseDesafioFinal.png" alt="Exemplo imagem">
 
 ## Funcionalidades 🚀 
 - Ambas as entidades "Colaborador" e "Aluno" terão as seguintes funcionalidades:
