@@ -71,6 +71,14 @@ public class ColaboradorModel {
 		this.cpf = dados.cpf();
 		this.email = dados.email();
 		this.cargo = dados.cargo();
+		this.endereco = new Endereco(
+    			dados.endereco().cep(),
+				dados.endereco().lougradourado(),
+				dados.endereco().bairro(), 
+				dados.endereco().ciadade(), 
+				dados.endereco().uf(),
+				dados.endereco().complemento(),
+				dados.endereco().numero());
 	}
 
 
